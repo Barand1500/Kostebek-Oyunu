@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .container {
+    font-family: sans-serif;
+    width: 50%;
+    margin: 5rem auto;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  header h3 {
+    margin: 3rem 0;
+    font-weight: 200;
+  }
+  header button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    background: rgb(138, 233, 233);
+  }
+  header button:hover {
+    background-color: rgb(101, 202, 202);
+  }
+  .game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  .toprak {
+    position: relative;
+    margin: 2rem 0.5rem;
+    margin-top: 5rem;
+    height: 6rem;
+    width: 30%;
+    background-size: cover;
+  }
+  .toprak::after {
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("toprak.png") center no-repeat;
+    background-size: cover;
+  }
+  .köstebek {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.5rem;
+    background: url("köstebek.png") center no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease;
+  }
+  .köstebek.secilen {
+    top: -3rem;
+  }
+  #süre {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    border-bottom: 1px solid black;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .container {
+      width: 70%;
+    }
+    .toprak {
+      position: relative;
+      width: 30%;
+    }
+    #süre {
+      right: 5%;
+      top: 20%;
+      border-bottom: 1px solid black;
+      font-size: 1.2rem;
+    }
+  }
